@@ -1,0 +1,39 @@
+@mixin beforeAfter($bgImg, $bgColor: transparent, $bgSize: auto, $bgPos: center, $height: auto, $top: 0, $bottom: 0, $right: 0, $left: 0, ) {
+  content: '';
+  position: absolute;
+  background-repeat: no-repeat;
+  margin: auto;
+  background-color: $bgColor;
+  background: $bgImg;
+  background-size: $bgSize;
+  background-position: $bgPos;
+  width: $width;
+  height: $height;  
+  top: $top;
+  bottom: $bottom;
+  right: $right;
+  left: $left;
+} 
+
+%transition {
+  transition: all ease 0.5s;
+}
+
+@mixin backgroundImg($bgImg, $bgColor: transparent, $bgSize: auto, $bgPos: center, ) {
+  background-color: $bgColor;
+  background-image: $bgImg;
+  background-size: $bgSize;
+  background-position: $bgPos;
+  background-repeat: no-repeat;
+}
+
+@mixin textElements($display, $fontSize, $fontStyle, $fontWeight, $lineHeight, $color, $letter-spacing) {
+  display: $display;
+  font-size: $fontSize;
+  font-style: $fontStyle;
+  font-weight: $fontWeight;
+  line-height: $lineHeight;
+  color: $color;
+  letter-spacing: $letterSpacing;
+}
+
